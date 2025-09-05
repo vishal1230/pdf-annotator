@@ -1,0 +1,208 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Enable text selection in PDF pages */
+.react-pdf__Page > div {
+    user-select: text !important;
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+}
+
+.react-pdf__Page .react-pdf__TextLayer span {
+    cursor: text;
+}
+
+/* Highlight selection style */
+::selection {
+    background-color: rgba(255, 255, 0, 0.4);
+}
+
+::-moz-selection {
+    background-color: rgba(255, 255, 0, 0.4);
+}
+
+/* Enable text selection in react-pdf */
+.react-pdf__Page > div {
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+}
+
+.react-pdf__Page .react-pdf__Page__textContent span {
+  cursor: text !important;
+}
+
+/* Highlight selection style */
+::selection {
+  background-color: rgba(255, 255, 0, 0.4) !important;
+}
+
+::-moz-selection {
+  background-color: rgba(255, 255, 0, 0.4) !important;
+}
+
+.react-pdf__Page__textContent {
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+}
+
+/* Style for text selection when highlighting mode is on */
+.react-pdf__Page__textContent span {
+  cursor: text;
+}
+
+/* Highlight visual feedback */
+::selection {
+  background-color: rgba(255, 255, 0, 0.3);
+}
+
+::-moz-selection {
+  background-color: rgba(255, 255, 0, 0.3);
+}
+
+/* React PDF Highlighter Styles */
+.PdfHighlighter {
+  height: 100vh;
+  overflow: auto;
+}
+
+.PdfHighlighter .page {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.highlight {
+  background: rgba(255, 255, 0, 0.3);
+  cursor: pointer;
+}
+
+.highlight--scrolled-to {
+  background: rgba(255, 0, 0, 0.3);
+}
+
+.popup {
+  background: white;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  max-width: 200px;
+}
+
+.tip {
+  background: white;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tip input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.tip button {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.tip button:hover {
+  background: #0056b3;
+}
+
+/* Force highlights to be visible in PDF text layer */
+.textLayer mark {
+  background: #ffe066 !important;
+  border-radius: 2px;
+  color: #222 !important;
+  font-weight: bold !important;
+  padding: 0 2px;
+  z-index: 2;
+  mix-blend-mode: multiply;
+}
+
+.textLayer .endOfContent mark {
+  background: none !important;
+}
+
+/* Ensure text layer allows highlighting */
+.react-pdf__Page__textContent {
+  mix-blend-mode: normal;
+}
